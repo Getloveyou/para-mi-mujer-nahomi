@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Para Nahomi 💖</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', 'Montserrat', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #7b113a 0%, #ad1457 60%, #c2185b 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .bg-heart {
+      position: absolute;
+      opacity: 0.13;
+      font-size: 12vw;
+      animation: float 8s ease-in-out infinite;
+      pointer-events: none;
+      color: #fff6fa;
+      filter: drop-shadow(0 0 18px #fff6fa);
+    }
+    .bg-heart:nth-child(1) { left: 4vw; top: 12vh; animation-delay: 0s;}
+    .bg-heart:nth-child(2) { right: 8vw; top: 18vh; animation-delay: 2.5s;}
+    .bg-heart:nth-child(3) { left: 18vw; bottom: 14vh; animation-delay: 4.5s;}
+    .bg-heart:nth-child(4) { right: 15vw; bottom: 8vh; animation-delay: 5.5s;}
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1);}
+      50% { transform: translateY(-38px) scale(1.14);}
+    }
+    .display-card {
+      background: rgba(255,255,255,0.96);
+      border-radius: 28px;
+      box-shadow: 0 8px 36px #ad14577c;
+      padding: 48px 26px 44px 26px;
+      max-width: 430px;
+      text-align: center;
+      z-index: 11;
+      margin: 36px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1.2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.97);}
+      to { opacity: 1; transform: scale(1);}
+    }
+    .foto-nahomi {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 60px;
+      margin-bottom: 22px;
+      border: 4px solid #ad1457;
+      box-shadow: 0 2px 14px #ad145766;
+      background: #fff;
+    }
+    .corazon {
+      font-size: 65px;
+      color: #b71c5a;
+      margin-bottom: 12px;
+      animation: latido 1.3s infinite;
+      filter: drop-shadow(0 2px 8px #ad1457);
+      user-select: none;
+    }
+    @keyframes latido {
+      0%, 100% { transform: scale(1);}
+      20% { transform: scale(1.18);}
+    }
+    h1 {
+      color: #ad1457;
+      font-size: 2.05em;
+      margin-bottom: 0.3em;
+      letter-spacing: 0.8px;
+      font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    }
+    .nombre-nahomi {
+      background: linear-gradient(90deg, #ad1457 0%, #c2185b 100%);
+      color: #fff;
+      border-radius: 15px;
+      font-weight: bold;
+      font-size: 1.09em;
+      display: inline-block;
+      padding: 4px 14px;
+      box-shadow: 0 0 7px #c2185b80;
+      margin-left: 7px;
+      letter-spacing: 1px;
+    }
+    .mensaje {
+      font-size: 1.19em;
+      color: #4d4d4d;
+      margin-bottom: 34px;
+      margin-top: 14px;
+      line-height: 1.6;
+      background: rgba(250,250,250,0.92);
+      border-radius: 17px;
+      padding: 18px 10px 16px 10px;
+      box-shadow: 0 1.5px 11px #ad145712;
+      user-select: none;
+    }
+    .emoji-fiesta {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+      animation: bounce 1s infinite alternate;
+      filter: drop-shadow(0 1px 9px #ad1457a0);
+    }
+    @keyframes bounce {
+      from { transform: translateY(0);}
+      to { transform: translateY(-10px);}
+    }
+    .mensaje-final {
+      font-size: 1.22em;
+      color: #ad1457;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      line-height: 1.6;
+      background: rgba(250,250,250,0.87);
+      border-radius: 14px;
+      padding: 14px 10px 13px 10px;
+      box-shadow: 0 1.5px 11px #ad145720;
+      user-select: none;
+    }
+    .firma {
+      color: #821040;
+      font-size: 1.18em;
+      margin-top: 24px;
+      font-family: 'Segoe Script', cursive;
+      letter-spacing: 0.6px;
+      opacity: 1;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nombre-josue {
+      font-size: 1.45em;
+      color: #fff;
+      background: linear-gradient(90deg, #ad1457 0%, #b71c5a 100%);
+      border-radius: 16px;
+      padding: 7px 32px;
+      margin: 14px 0 0 0;
+      font-family: 'Segoe Script', cursive;
+      letter-spacing: 2px;
+      border: 2px solid #b71c5a;
+      box-shadow: 0 2px 15px #b71c5a66;
+      text-shadow: 0 1px 10px #ad1457a8, 0 1px 0 #fff;
+      transition: transform 0.2s;
+      animation: resaltado 1.4s infinite alternate;
+    }
+    @keyframes resaltado {
+      from { transform: scale(1);}
+      to { transform: scale(1.09);}
+    }
+    @media (max-width: 500px) {
+      .display-card { padding: 14vw 2vw; }
+      h1 { font-size: 1.1em;}
+      .mensaje, .mensaje-final { font-size: 1em;}
+      .foto-nahomi { width: 80px; height: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Corazones animados de fondo -->
+  <div class="bg-heart">💗</div>
+  <div class="bg-heart">💖</div>
+  <div class="bg-heart">💜</div>
+  <div class="bg-heart">💞</div>
+
+  <!-- DISPLAY -->
+  <div class="display-card">
+    <img class="foto-nahomi" src="foto-nahomi.jpg" alt="Nahomi">
+    <div class="corazon">💖</div>
+    <h1>
+      Para alguien muy especial,
+      <span class="nombre-nahomi">Nahomi</span>
+    </h1>
+    <div class="mensaje">
+      Desde que llegaste, iluminaste mi vida de una forma única. Quisiera compartir contigo todos mis días, mis sueños y mis risas.<br>
+      ¿Te gustaría comenzar una historia juntos, llena de momentos inolvidables, cariño y complicidad?
+    </div>
+    <div class="emoji-fiesta">🌟🥰</div>
+    <div class="mensaje-final">
+      Nahomi, gracias por ser como eres.<br>
+      Prometo apoyarte, cuidarte y hacerte sonreír, pase lo que pase.<br>
+      <b>¿Te animas a ser parte de esta aventura conmigo? 💑</b>
+    </div>
+    <div class="firma">
+      Con todo mi cariño,
+      <span class="nombre-josue">Josue</span>
+      <span style="font-size:1.3em;">💌</span>
+    </div>
+  </div>
+</body>
+</html>
